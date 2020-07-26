@@ -248,7 +248,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/07/23/dd/" itemprop="url">������������</a></h1>
+                <a class="post-title-link" href="/2020/07/23/dd/" itemprop="url">Java基础</a></h1>
         
 
         <div class="post-meta">
@@ -300,8 +300,95 @@
       
         
           
-            <p>rrrrrrrrrrrrrrrrrrrg</p>
+            <h2 id="变量："><a href="#变量：" class="headerlink" title="变量："></a>变量：</h2><ul>
+<li>操作变量</li>
+<li>变量用于存储内容，在计算机中等同一个有命名的存储地址</li>
+<li>变量：是解决内容复用的；有名称</li>
+<li>Java中变量的内容，就是对象</li>
+<li>eg：String name;   //声明了一个名为name，类型为String的变量</li>
+<li>变量首字母一般小写</li>
+</ul>
+<hr>
+<h2 id="关键字："><a href="#关键字：" class="headerlink" title="关键字："></a>关键字：</h2><ul>
+<li>不允许用来声明的名称：<ul>
+<li>public / class / void / int 等等</li>
+<li>eg：String public;  //❌</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="赋值："><a href="#赋值：" class="headerlink" title="赋值："></a>赋值：</h2><ul>
+<li>声明变量后，往变量里存储数据的行为叫赋值、</li>
+<li>重复赋值：变量赋值后，可再次被修改</li>
+</ul>
+<hr>
+<h2 id="数据类型："><a href="#数据类型：" class="headerlink" title="数据类型："></a>数据类型：</h2><ul>
+<li>字符串 String<ul>
+<li>字符串+数字：会变成字符串</li>
+</ul>
+</li>
+<li>数字<ul>
+<li>小整数 int  <ul>
+<li>最小值：Integer.MIN_VALUE = -2的31次方</li>
+<li>最大值：Integer.MAX_VALUE = 2的31次方-1</li>
+</ul>
+</li>
+<li>大整数 long<ul>
+<li>最小值：Long.MIN_VALUE = -2的63次方</li>
+<li>最大值：Long.MAX_VALUE = 2的63次方-1</li>
+<li>注意：long类型赋值时，数字后要跟一个小写的l（L）。eg：long num = 78900000123l;</li>
+</ul>
+</li>
+<li>浮点数 double</li>
+</ul>
+</li>
+<li>布尔 boolean<ul>
+<li>布尔值只能是true或false</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="运算符："><a href="#运算符：" class="headerlink" title="运算符："></a>运算符：</h2><ul>
+<li>加法 +</li>
+<li>减法 -</li>
+<li>乘法 *</li>
+<li>除法 /</li>
+<li>整除 %</li>
+</ul>
+<hr>
+<pre><code>int now = 59;
+System.out.println(now/60);
 
+结果为：0    //Java执行整数除法，当两操作数都是整数时，结果自动变整数（直接去掉了小数点值）</code></pre><hr>
+<pre><code>int now = 59;
+System.out.println(100*now/60);
+
+结果为：98    //计算百分比</code></pre><hr>
+<pre><code>double now = 59;
+double result = now/60;
+System.out.println(result);
+
+结果为：0.983333333333333    //浮点类型</code></pre><hr>
+<pre><code>int total = 0;
+
+int u1 = 80;
+total=total+u1;
+
+int u2 = 90;
+total=total+u2;
+
+int u3 = 50;
+total=total+u3;
+
+int u4 = 65;
+total=total+u4;
+
+int average = total/4;
+
+System.out.println(average);
+
+
+结果：71    //计算平均分</code></pre>
           
         
       
@@ -649,7 +736,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/07/11/suanfa/" itemprop="url">这两天学习了经典算法之动态规划</a></h1>
+                <a class="post-title-link" href="/2020/07/11/suanfa/" itemprop="url">经典算法之动态规划</a></h1>
         
 
         <div class="post-meta">
@@ -775,7 +862,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/07/09/analysis/" itemprop="url">今天学会了对用户行为日志分析</a></h1>
+                <a class="post-title-link" href="/2020/07/09/analysis/" itemprop="url">对用户行为日志分析</a></h1>
         
 
         <div class="post-meta">
@@ -901,7 +988,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/07/08/fabu/" itemprop="url">hh今天学习了hexo发布博客</a></h1>
+                <a class="post-title-link" href="/2020/07/08/fabu/" itemprop="url">Hexo发布博客</a></h1>
         
 
         <div class="post-meta">
@@ -960,7 +1047,7 @@
 <li>hexo clean  //清除缓存</li>
 <li>hexo generate //生成新静态文件hexo</li>
 <li>hexo deploy   //把新生成文件部署到博客</li>
-<li>git clone –depth 1 <a href="mailto:git@github.com">git@github.com</a>:iissnan/hexo-theme-next.git themes/next<pre><code>//在博客根目录blog下下载主题文件</code></pre></li>
+<li>git clone –depth 1 <a href="mailto:git@github.com">git@github.com</a>:iissnan/hexo-theme-next.git themes/next  //在博客根目录blog下下载主题文件</li>
 <li>theme: landscape  //更改文件配置</li>
 <li>deploy:<br>type: git<br>repository: GitHub仓库地址<br>branch: master</li>
 </ul>
