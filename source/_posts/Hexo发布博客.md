@@ -1,5 +1,5 @@
 ---
-title: hh今天学习了hexo发布博客
+title: Hexo发布博客
 date: 2020-07-08 10:24:48
 tags:
 ---
