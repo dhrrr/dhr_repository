@@ -331,9 +331,16 @@
       
         
           
-            <p>abc</p>
+          abc
 
           
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/07/24/04-%E9%80%BB%E8%BE%91%E8%AF%AD%E5%8F%A5/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -473,130 +480,19 @@
       
         
           
-            <h2 id="数学函数（生成随机数）："><a href="#数学函数（生成随机数）：" class="headerlink" title="数学函数（生成随机数）："></a>数学函数（生成随机数）：</h2><pre><code>double value = Math.random();    //0.40068331197074114   0.21177156791789276</code></pre><ul>
-<li><p>Math.random()方法用于返回一个随机数</p>
-</li>
-<li><p>随机数范围为：0.0=&lt;X&lt;1.0</p>
-<pre><code>double value = Math.random();
-int newValue = (int)(value * 10);    //把随机的结果*10 得到0-9之间的随机数</code></pre></li>
-</ul>
-<ul>
-<li>浮点数转化为整数。理论上数字类型都可以转化，只是自动去掉小数点</li>
-</ul>
-<ul>
-<li><p>示例：生成验证码：</p>
-<pre><code>double value = Math.random();int code = (int)(value*1000000);  //生成6位验证码❌。因为可能只有5位数
+          数学函数（生成随机数）：double value = Math.random();    //0.40068331197074114   0.21177156791789276
+Math.random()方法用于返回一个随机数
 
-double value = Math.random();int code = (int)((value+1)*100000);  //生成6位验证码。确保是6位，但第1位总是1。❌
-
-int code = (int)((Math.random()*9+1)*1000);   //生成4位验证码。4个数均随机。✔</code></pre></li>
-</ul>
-<hr>
-<h2 id="自定义方法："><a href="#自定义方法：" class="headerlink" title="自定义方法："></a>自定义方法：</h2><p>（自己添加的方法，如基础的 main 方法：main方法有特殊含义：是程序执行的入口，用于启动程序。如果要执行代码必须要有main方法）</p>
-<pre><code>    // public（公共的） static（静态） void（空类型）
-        public static void 方法名称(方法参数){
-          代码块
-        }
-
-    eg：public class Custom {
-    public static void main(String[] args){   //Java执行程序的方法
-      System.out.println(&quot;程序从这开始执行&quot;);
-    }
-}</code></pre><ul>
-<li><p>Java命名规范（遵循“驼峰式”）：</p>
-<ul>
-<li>方法名称：小驼峰：第一个单词首字母小写，第二个大写    eg：myDocument、password</li>
-<li>大驼峰：每个具体单词首字母大写    eg：UserName</li>
-</ul>
-</li>
-<li><p>无参数方法</p>
-<ul>
-<li>eg：创建一个名为 play 的方法：</li>
-<li><img src="/.com//mywork/dhrrr.github.io/source/_posts/imag/3.png" alt></li>
-<li>注意：方法名称后面的小括号不能省。代码规范</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h2 id="方法调用"><a href="#方法调用" class="headerlink" title="方法调用"></a>方法调用</h2><p>方法创建成功后：</p>
-<ul>
-<li>自定义的方法都在class类当中，顺序在main方法前或后都可</li>
-<li>但方法内，不能新建方法</li>
-<li>自定义方法可以被调用多次，方法内也可以调用其他方法</li>
-</ul>
-<p>为什么需要方法：</p>
-<ul>
-<li><p>解决代码复用</p>
-</li>
-<li><p>隐藏程序细节，使程序更清晰，从而降低复杂度</p>
-</li>
-<li><p>代码解耦合，支持多人协同开发</p>
-<pre><code>public class Custom {
-
-  public static void main(String[] args){
-    System.out.println(&quot;测试&quot;);
-    newLine();
-    newLine();    //调用多次
-    System.out.println(&quot;结束&quot;);
-  }
-
-  public static void newLine(){
-    System.out.println(&quot;123&quot;);
-    format();    //调用下面的 format 方法（方法内也可以调用其他方法）
-  }
-
-  public static void format(){
-    System.out.println(&quot;------------&quot;);
-  }
-
-}
-
-结果：
-        测试
-           123
-        ------------
-           123
-        ------------
-        结束</code></pre></li>
-</ul>
-<hr>
-<h2 id="方法参数："><a href="#方法参数：" class="headerlink" title="方法参数："></a>方法参数：</h2><ul>
-<li><p>参数类型 参数变量名</p>
-<ul>
-<li>多参数方法：定义多个参数，用“ ,“ 分隔</li>
-</ul>
-</li>
-<li><p>实际上，方法参数 和 声明变量 并无区别</p>
-</li>
-<li><p><strong>形参</strong>：编程语言把在方法参数位置声明的变量叫做形参</p>
-<pre><code>public class MessageCode {
-
-  public static void main (String[] args) {
-    String text = &quot;亲爱的XXX，你本次的验证码是&quot;;
-    code(text,1000);
-    code(text,100000);    //逗号分隔
-  }
-
-  public static void code(tring text,int length){    //多个方法参数
-    int code = (int)((Math.random()*9+1)*length);
-    System.out.println(&quot;亲爱的XXX，你本次的验证码是【&quot;+code+&quot;】&quot;);
-  }
-
-}
-
-结果：
-        亲爱的XXX，你本次的验证码是【1127】
-        亲爱的XXX，你本次的验证码是【148083】</code></pre></li>
-<li><p>方法有了参数声明后，就必须要传入参数，否则编译失败</p>
-</li>
-<li><p><strong>实参</strong>：把传入的参数，可以是变量，叫做实参</p>
-<pre><code>random(100000);    // 直接传值
-
-int len = 100000;    // 传递变量
-random(len);</code></pre></li>
-</ul>
-
-          
+随机数范围为：0.0=&lt;X&lt;1.0
+double valu
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/07/23/03-%E6%97%A0%E8%BF%94%E5%9B%9E%E5%80%BC%E6%96%B9%E6%B3%95/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -736,96 +632,26 @@ random(len);</code></pre></li>
       
         
           
-            <h2 id="变量："><a href="#变量：" class="headerlink" title="变量："></a>变量：</h2><ul>
-<li>操作变量</li>
-<li>变量用于存储内容，在计算机中等同一个有命名的存储地址</li>
-<li>变量：是解决内容复用的；有名称</li>
-<li>Java中变量的内容，就是对象</li>
-<li>eg：String name;   //声明了一个名为name，类型为String的变量</li>
-<li>变量首字母一般小写</li>
-</ul>
-<hr>
-<h2 id="关键字："><a href="#关键字：" class="headerlink" title="关键字："></a>关键字：</h2><ul>
-<li>不允许用来声明的名称：<ul>
-<li>public / class / void / int 等等</li>
-<li>eg：String public;  //❌</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h2 id="赋值："><a href="#赋值：" class="headerlink" title="赋值："></a>赋值：</h2><ul>
-<li>声明变量后，往变量里存储数据的行为叫赋值、</li>
-<li>重复赋值：变量赋值后，可再次被修改</li>
-</ul>
-<hr>
-<h2 id="数据类型："><a href="#数据类型：" class="headerlink" title="数据类型："></a>数据类型：</h2><ul>
-<li>字符串 String<ul>
-<li>字符串+数字：会变成字符串</li>
-</ul>
-</li>
-<li>数字<ul>
-<li>小整数 int  <ul>
-<li>最小值：Integer.MIN_VALUE = -2的31次方</li>
-<li>最大值：Integer.MAX_VALUE = 2的31次方-1</li>
-</ul>
-</li>
-<li>大整数 long<ul>
-<li>最小值：Long.MIN_VALUE = -2的63次方</li>
-<li>最大值：Long.MAX_VALUE = 2的63次方-1</li>
-<li>注意：long类型赋值时，数字后要跟一个小写的l（L）。eg：long num = 78900000123l;</li>
-</ul>
-</li>
-<li>浮点数 double</li>
-</ul>
-</li>
-<li>布尔 boolean<ul>
-<li>布尔值只能是true或false</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h2 id="运算符："><a href="#运算符：" class="headerlink" title="运算符："></a>运算符：</h2><ul>
-<li>加法 +</li>
-<li>减法 -</li>
-<li>乘法 *</li>
-<li>除法 /</li>
-<li>整除 %</li>
-</ul>
-<hr>
-<pre><code>int now = 59;
-System.out.println(now/60);
-
-结果为：0    //Java执行整数除法，当两操作数都是整数时，结果自动变整数（直接去掉了小数点值）</code></pre><hr>
-<pre><code>int now = 59;
-System.out.println(100*now/60);
-
-结果为：98    //计算百分比</code></pre><hr>
-<pre><code>double now = 59;
-double result = now/60;
-System.out.println(result);
-
-结果为：0.983333333333333    //浮点类型</code></pre><hr>
-<pre><code>int total = 0;
-
-int u1 = 80;
-total=total+u1;
-
-int u2 = 90;
-total=total+u2;
-
-int u3 = 50;
-total=total+u3;
-
-int u4 = 65;
-total=total+u4;
-
-int average = total/4;
-
-System.out.println(average);
+          变量：
+操作变量
+变量用于存储内容，在计算机中等同一个有命名的存储地址
+变量：是解决内容复用的；有名称
+Java中变量的内容，就是对象
+eg：String name;   //声明了一个名为name，类型为String的变量
+变量首字母一般小写
 
 
-结果：71    //计算平均分</code></pre>
-          
+关键字：
+不允许用来声明的名称：
+public /
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/07/22/02-Java%E5%9F%BA%E7%A1%80/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -965,38 +791,18 @@ System.out.println(average);
       
         
           
-            <ul>
-<li>Java：面向对象的程序设计语言。目前属于Oracle公司</li>
-<li>高级语言：Java、Python、C、C++等     低级语言又叫机器语言or汇编语言    计算机只能运行低级语言，故高级语言编写的程序必须先被翻译成低级语言才能运行</li>
-<li>高级语言（称为源代码）：优点：可移植性。不修改的情况下可以运行多种计算机平台</li>
-<li>Java代码不能直接被执行</li>
-</ul>
-<hr>
-<ul>
-<li>目前编程语言的翻译主要有两种方式：解释（interpreting） &amp;  编译（compiling）<ul>
-<li>解释器：完成解释任务的程序（按行读取，先翻译后执行命令）</li>
-<li>编译器：完成编译任务的程序（在执行之前一次性对程序进行完整编译，故程序的运行是在编译过程之后，编译器生成的程序称为可执行程序）</li>
-</ul>
-</li>
-<li>Java既可以被编译，也可以被解释</li>
-<li>Java编译过程中，不生成机器语言，而是生成字节码（字节码具备高级语言的可移植性）</li>
-<li>除了生成字节码之外，Java还创建了JVM（Java虚拟机），通过JVM支持字节码的解释运行</li>
-<li><img src="/.com//mywork/dhrrr.github.io/source/_posts/imag/1.png" alt></li>
-<li>Java源代码是一个后缀为java的文本文件。文件名必须是英文字母且一般首字母大写，尽量不用数字。eg：HelloWorld.java</li>
-</ul>
-<hr>
-<ul>
-<li>Java代码的注释：<ul>
-<li>行注释：//xxx</li>
-<li>块注释：<img src="/.com//mywork/dhrrr.github.io/source/_posts/imag/2.png" alt><ul>
-<li>一般在Java类的声明上、方法上使用块注释</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
           
+Java：面向对象的程序设计语言。目前属于Oracle公司
+高级语言：Java、Python、C、C++等     低级语言又叫机器语言or汇编语言    计算机只能运行低级语言，故高级语言编写的程序必须先被翻译成低级语言才能运行
+高级语言（称为源代码）：优点：可移植性。不修改的情况下可以运行多种
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/07/22/01-Java%E5%A6%82%E4%BD%95%E8%BF%90%E8%A1%8C&%E6%B3%A8%E9%87%8A/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1114,15 +920,22 @@ System.out.println(average);
       
         
           
-            <p>动态规划的核心是需要找到父与子的关系，求最优解<br>其中要注意几点：</p>
-<ul>
-<li>要处理边界情况</li>
-<li>缓存策略：使用Java中HashMap<br>缓存中有值，则直接从缓存中获取，避免重复求解</li>
-<li>唯一性</li>
-<li>将数组转换为字符串：String key = w + “-“ + Arrays.toString(objects);</li>
-</ul>
+          动态规划的核心是需要找到父与子的关系，求最优解其中要注意几点：
+
+要处理边界情况
+缓存策略：使用Java中HashMap缓存中有值，则直接从缓存中获取，避免重复求解
+唯一性
+将数组转换为字符串：String key = w + “-“ + Arrays.toString(objects);
+
 
           
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/07/11/%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95%E4%B9%8B%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1240,15 +1053,19 @@ System.out.println(average);
       
         
           
-            <p>行为日志不仅包含用户的行为，也包含服务器响应是否正常，这样可以快速发现问题并处理。<br>所以，我觉得行为日志非常重要，观察和分析日志行为是一个必备技能！</p>
-<p>有三个基本操作：</p>
-<ul>
-<li>grep -c ‘11.176.159.95’ cookie_log.log<pre><code>//统计关键字出现的次数</code></pre></li>
-<li>grep ‘11.176.159.95’ cookie_log.log<pre><code>//统计关键字所在行</code></pre></li>
-<li>cat cookie_log.log | awk ‘{print $8}’ | sort | uniq -c | sort -k1r | head -10<pre><code>//统计出现最多的内容。本例取第8列内容，取前10行</code></pre></li>
-</ul>
+          行为日志不仅包含用户的行为，也包含服务器响应是否正常，这样可以快速发现问题并处理。所以，我觉得行为日志非常重要，观察和分析日志行为是一个必备技能！
+有三个基本操作：
 
-          
+grep -c ‘11.176.159.95’ cookie_log.log//统计关键字出现的次数
+grep ‘11.176.15
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/07/09/%E7%94%A8%E6%88%B7%E8%A1%8C%E4%B8%BA%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1366,19 +1183,20 @@ System.out.println(average);
       
         
           
-            <ul>
-<li>hexo init blog  //创建一个叫blog的hexo工程</li>
-<li>npm install hexo-deployer-git –save //安装发布工具（在blog目录）</li>
-<li>hexo new xxx  //创建新博客，名为xxx的md文件</li>
-<li>hexo clean  //清除缓存</li>
-<li>hexo generate //生成新静态文件hexo</li>
-<li>hexo deploy   //把新生成文件部署到博客</li>
-<li>git clone –depth 1 <a href="mailto:git@github.com">git@github.com</a>:iissnan/hexo-theme-next.git themes/next  //在博客根目录blog下下载主题文件</li>
-<li>theme: landscape  //更改文件配置</li>
-<li>deploy:<br>type: git<br>repository: GitHub仓库地址<br>branch: master</li>
-</ul>
-
           
+hexo init blog  //创建一个叫blog的hexo工程
+npm install hexo-deployer-git –save //安装发布工具（在blog目录）
+hexo new xxx  //创建新博客，名为xxx的md文件
+hexo clean  //清除缓存
+hexo gen
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/07/08/Hexo%E5%8F%91%E5%B8%83%E5%8D%9A%E5%AE%A2/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
