@@ -79,12 +79,12 @@
 
 
 
-<meta name="description" content="文档结构    作用：告知浏览器该页面文件的文档类型 必须在第一行。大小写不敏感。无结束标签   ......   - 作用：告知浏览器自身是一个HTML文档   - lang属性：语言属性  标签属性  一个标签可有0个or多个标签属性 标签属性与标签名称、标签属性与标签属性 之间需用空格隔开 可赋予标签更多信息。形式：名称&#x3D;”值”（key&#x3D;”value”）   ......   - 一个  元">
+<meta name="description" content="文档结构 &lt;!DOCTYPE html&gt;  作用：告知浏览器该页面文件的文档类型 必须在第一行。大小写不敏感。无结束标签  &lt;html lang&#x3D;&quot;en&quot;&gt;......&lt;&#x2F;html&gt;  作用：告知浏览器自身是一个HTML文档 lang属性：语言属性 标签属性 一个标签可有0个or多个标签属性 标签属性与标签名称、标签属性与标签属性 之间需用空">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HTML">
 <meta property="og:url" content="http://yoursite.com/2020/08/02/2%20HTML/index.html">
 <meta property="og:site_name" content="dinHR&#39;s Blog">
-<meta property="og:description" content="文档结构    作用：告知浏览器该页面文件的文档类型 必须在第一行。大小写不敏感。无结束标签   ......   - 作用：告知浏览器自身是一个HTML文档   - lang属性：语言属性  标签属性  一个标签可有0个or多个标签属性 标签属性与标签名称、标签属性与标签属性 之间需用空格隔开 可赋予标签更多信息。形式：名称&#x3D;”值”（key&#x3D;”value”）   ......   - 一个  元">
+<meta property="og:description" content="文档结构 &lt;!DOCTYPE html&gt;  作用：告知浏览器该页面文件的文档类型 必须在第一行。大小写不敏感。无结束标签  &lt;html lang&#x3D;&quot;en&quot;&gt;......&lt;&#x2F;html&gt;  作用：告知浏览器自身是一个HTML文档 lang属性：语言属性 标签属性 一个标签可有0个or多个标签属性 标签属性与标签名称、标签属性与标签属性 之间需用空">
 <meta property="og:image" content="http://yoursite.com/images/9.png">
 <meta property="og:image" content="http://yoursite.com/images/10.png">
 <meta property="og:image" content="http://yoursite.com/images/11.png">
@@ -93,7 +93,7 @@
 <meta property="og:image" content="http://yoursite.com/images/14.png">
 <meta property="og:image" content="http://yoursite.com/images/15.png">
 <meta property="article:published_time" content="2020-08-02T10:50:33.000Z">
-<meta property="article:modified_time" content="2020-08-02T15:06:26.727Z">
+<meta property="article:modified_time" content="2020-08-02T15:42:32.072Z">
 <meta property="article:author" content="dinHR">
 <meta property="article:tag" content="前端">
 <meta name="twitter:card" content="summary">
@@ -143,7 +143,7 @@
 
 
 
-</head>
+<meta name="generator" content="Hexo 4.2.1"></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
@@ -189,7 +189,7 @@
       
         
         <li class="menu-item menu-item-home">
-          <a href="/%20" rel="section">
+          <a href="/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
@@ -198,8 +198,18 @@
         </li>
       
         
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-categories">
-          <a href="/categories/%20" rel="section">
+          <a href="/categories/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
@@ -209,7 +219,7 @@
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags/%20" rel="section">
+          <a href="/tags/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
@@ -333,7 +343,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  526
+                  634
                 </span>
               
 
@@ -349,7 +359,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  2
                 </span>
               
             </div>
@@ -371,41 +381,38 @@
 
       
         <h1 id="文档结构"><a href="#文档结构" class="headerlink" title="文档结构"></a>文档结构</h1><p><img src="/images/9.png" alt></p>
-<ul>
-<li><!DOCTYPE html>
+<p><code>&lt;!DOCTYPE html&gt;</code></p>
 <ul>
 <li>作用：告知浏览器该页面文件的文档类型</li>
 <li>必须在第一行。大小写不敏感。无结束标签</li>
 </ul>
-</li>
-<li><html lang="en">......</html>
-  - 作用：告知浏览器自身是一个HTML文档
-  - lang属性：语言属性
-</li>
-<li><p>标签属性</p>
+<p><code>&lt;html lang=&quot;en&quot;&gt;......&lt;/html&gt;</code></p>
 <ul>
+<li>作用：告知浏览器自身是一个HTML文档</li>
+<li>lang属性：语言属性<ul>
+<li>标签属性</li>
 <li>一个标签可有0个or多个标签属性</li>
 <li>标签属性与标签名称、标签属性与标签属性 之间需用空格隔开</li>
 <li>可赋予标签更多信息。形式：名称=”值”（key=”value”）</li>
 </ul>
 </li>
-<li><head>......<meta name="generator" content="Hexo 4.2.1"></head>
-  - 一个 <head> 元素必须包含且只能包含一个 <title> 元素
-</title></head></li>
-<li><body>......</body>
-  - 包含文档所有内容
-      - 文本、超链接、图像、表格、列表 etc
-
-
-
-
+</ul>
+<p><code>&lt;head&gt;......&lt;/head&gt;</code></p>
+<ul>
+<li>一个<code>&lt;head&gt;</code>元素必须包含且只能包含一个<code>&lt;title&gt;</code>元素</li>
+</ul>
+<p><code>&lt;body&gt;......&lt;/body&gt;</code></p>
+<ul>
+<li>包含文档所有内容<ul>
+<li>文本、超链接、图像、表格、列表 etc</li>
+</ul>
 </li>
 </ul>
 <hr>
 <h1 id="元素结构"><a href="#元素结构" class="headerlink" title="元素结构"></a>元素结构</h1><p><img src="/images/10.png" alt></p>
 <ul>
 <li>一个 HTML元素 由 开始标签、内容、结束标签 构成</li>
-<li>通常成对出现。也有单独呈现的标签。eg： <input>、<img> 等</li>
+<li>通常成对出现。也有单独呈现的标签。eg：<code>&lt;input&gt;</code>、<code>&lt;img&gt;</code> 等</li>
 <li>统一要求为 小写</li>
 </ul>
 <hr>
@@ -416,54 +423,43 @@
 </ul>
 <hr>
 <h1 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h1><ul>
-<li>用  <!-- --> 表示注释：</li>
+<li>用 <code>&lt;!-- --&gt;</code> 表示注释：</li>
 </ul>
 <p><img src="/images/12.png" alt></p>
 <hr>
 <h1 id="文本标签"><a href="#文本标签" class="headerlink" title="文本标签"></a>文本标签</h1><p>1、常用文本标签</p>
 <ul>
-<li><p>段落标签：</p>
-<ul>
-<li><p> </p>
-</li>
+<li>段落标签：<br>  <code>&lt;p&gt; &lt;/p&gt;</code></li>
+<li>内联标签：<ul>
+<li><code>&lt;span&gt; &lt;/span&gt;</code><ul>
+<li>通常表示一个行内短语，使网页更有条理。<span>未加样式前，样式上与普通文本无区别</span></li>
 </ul>
 </li>
-<li><p>内联标签：</p>
-<ul>
-<li><span> </span>：通常表示一个行内短语，使网页更有条理。<span>未加样式前，样式上与普通文本无区别</span></li>
-<li><strong> </strong>：加粗词句，重点标注</li>
+<li><code>&lt;strong&gt; &lt;/strong&gt;</code><ul>
+<li>加粗词句，重点标注</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 <p>2、标题标签</p>
 <p><img src="/images/13.png" alt></p>
 <ul>
-<li><h1> </h1> 
-  - 数字越大、级别越低、标题越小
-  - 下一级标题是上一级标题的子标题。一级标题后可有多个二级标题
-  - 标题之间不可越级
-
-
-
-
-</li>
+<li>数字越大、级别越低、标题越小</li>
+<li>下一级标题是上一级标题的子标题，一级标题后可有多个二级标题</li>
+<li>标题之间不可越级</li>
 </ul>
 <p>3、图片标签</p>
-<ul>
-<li><img>
-</li>
-<li><p>内联标签，且无结束标签</p>
-</li>
-<li><p>属性：</p>
-<ul>
+<pre><code>&lt;img src=&quot;/P3-1-HTML-CSS/1.3/1-3-island-2.jpg&quot; alt=&quot;&quot; /&gt;</code></pre><ul>
+<li>内联标签，且无结束标签</li>
+<li>属性：<ul>
 <li>src：中是图片的 相对路径或绝对路径</li>
 <li>alt：定义了描述图片的替换文本，若图片url错误，该图片不在支持的格式列表中，或图像还未被下载，用户将看到此处的替换文本</li>
 </ul>
 </li>
 </ul>
 <p>4、链接标签</p>
-<ul>
-<li><a> </a></li>
+<pre><code>&lt;a href=&quot;https://www.google.com/&quot;&gt;谷歌搜索&lt;/a&gt;</code></pre><ul>
 <li>是内联标签</li>
 <li>属性：<ul>
 <li>href：给出链接指向的网站，值为一个URL或锚点</li>
@@ -477,17 +473,17 @@
 </ul>
 <p>5、有序列表&amp;无序列表</p>
 <ul>
-<li>有序 <ol> </ol> ：<ul>
+<li>有序<code>&lt;ol&gt; &lt;/ol&gt;</code>：<ul>
 <li><img src="/images/14.png" alt></li>
 </ul>
 </li>
-<li>无序 <ul> </ul> ：<ul>
+<li>无序<code>&lt;ul&gt; &lt;/ul&gt;</code>：<ul>
 <li><img src="/images/15.png" alt></li>
 </ul>
 </li>
 </ul>
-<hr>
-<h1 id="表单标签"><a href="#表单标签" class="headerlink" title="表单标签"></a>表单标签</h1>
+<p>6、表单标签</p>
+
       
     </div>
     
@@ -640,7 +636,7 @@ var jiathis_config={
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/archives">
+                <a href="/archives/%7C%7C%20archive">
               
                   <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">日志</span>
@@ -697,7 +693,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#文档结构"><span class="nav-number">1.</span> <span class="nav-text">文档结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#元素结构"><span class="nav-number">2.</span> <span class="nav-text">元素结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#嵌套"><span class="nav-number">3.</span> <span class="nav-text">嵌套</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#注释"><span class="nav-number">4.</span> <span class="nav-text">注释</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文本标签"><span class="nav-number">5.</span> <span class="nav-text">文本标签</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#"><span class="nav-number">6.</span> <span class="nav-text"> </span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#表单标签"><span class="nav-number">7.</span> <span class="nav-text">表单标签</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#文档结构"><span class="nav-number">1.</span> <span class="nav-text">文档结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#元素结构"><span class="nav-number">2.</span> <span class="nav-text">元素结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#嵌套"><span class="nav-number">3.</span> <span class="nav-text">嵌套</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#注释"><span class="nav-number">4.</span> <span class="nav-text">注释</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文本标签"><span class="nav-number">5.</span> <span class="nav-text">文本标签</span></a></li></ol></div>
             
 
           </div>
@@ -743,7 +739,7 @@ var jiathis_config={
 
 <div >
   <div ></div>
-  <span >����ȫվ��6.4k��</span>
+  <span >����ȫվ��6.5k��</span>
 </div>
         
 
